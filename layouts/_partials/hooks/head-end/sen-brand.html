@@ -93,6 +93,13 @@ h1,h2,h3,.font-serif{font-family:'EB Garamond',Georgia,serif}
 .sh-contact p{font-size:16px;color:var(--sen-mist);line-height:1.6}
 .sh-contact a{font-size:17px;font-weight:600;color:var(--sen-saffron)}
 
+/* Publications page: numbered list [1], [2], ... */
+.space-y-3:has(> .view-citation){counter-reset:pub}
+.view-citation{counter-increment:pub;position:relative;padding-left:3rem}
+.view-citation::before{content:"[" counter(pub) "]";position:absolute;left:0;top:0;font-weight:600;color:var(--sen-clay);font-variant-numeric:tabular-nums}
+.view-citation .pub-icon{display:none}
+@media (max-width:640px){.space-y-3:has(> .view-citation){padding:0 16px}.view-citation{padding-left:2.4rem}}
+
 @media (max-width:640px){
   .sh-hero-text{padding:56px 0 24px}
   .sh-hero h1{font-size:52px}
