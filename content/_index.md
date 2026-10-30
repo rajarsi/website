@@ -1,76 +1,88 @@
 ---
-# Leave the homepage title empty to use the site title
+# Home page. Layout: layouts/_partials/hbx/blocks/profile-home/block.html
+# Name, role, affiliation and profile links come from data/authors/me.yaml.
+# Featured papers are the publications marked `featured: true`.
 title: ''
 summary: ''
 date: 2026-10-30
 type: landing
 
 sections:
-  - block: resume-biography-3
+  - block: profile-home
     content:
       username: me
-      text: ''
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
-      button2:
-        text: Speaker Profile
-        url: uploads/speaker-profile.pdf
-      headings:
-        about: ''
-        education: ''
-        interests: ''
+      eyebrow: Astroinformatics · Deep Learning · Explainable AI
+      role: Senior Assistant Professor, School of Computer Engineering
+      statement: I apply deep learning and explainable AI to astronomical big data and space science — from estimating galaxy redshifts to making models trustworthy for satellite systems.
+      portrait: portrait.jpg
+      buttons:
+        - text: Download CV
+          url: uploads/resume.pdf
+          icon: download
+        - text: Speaker Profile
+          url: uploads/speaker-profile.pdf
+          icon: mic
+          style: outline
+      stats:
+        - value: '16'
+          label: years of teaching
+        - value: '40+'
+          label: SCI / Scopus publications
+        - value: '4'
+          label: doctoral scholars guided
+        - value: '2'
+          label: patents
+      about:
+        title: Teacher, researcher, mentor
+        text: |-
+          Dr. Snigdha Sen is a Senior Assistant Professor in the School of Computer Engineering at Manipal Institute of Technology Bengaluru, with around 16 years of teaching experience. Before joining Manipal she was an Associate Professor at Global Academy of Technology, Bengaluru.
+
+          She holds a PhD from IIIT Allahabad, an M.Tech in Information Technology from Jadavpur University and a B.E. from UIT, University of Burdwan. She has published over 40 SCI- and Scopus-indexed papers and is a life member of the Computer Society of India.
+      research:
+        title: Four connected themes
+        items:
+          - title: Astroinformatics
+            art: astro
+            text: Deep learning for photometric redshift estimation, imbalanced astronomical data and galaxy-image clustering.
+          - title: Explainable AI for space
+            art: space
+            text: Interpretable models for safety-critical settings such as satellite telemetry anomaly detection.
+          - title: Computer vision
+            art: vision
+            text: CNN, U-Net and transformer models for image steganography, medical segmentation and video captioning.
+          - title: Big data & applied AI
+            art: data
+            text: Scalable learning on Spark, and machine learning for healthcare, materials science and social good.
+      featured:
+        title: Featured papers
+      highlights:
+        title: Talks, grants and patents
+        more_url: experience/
+        cards:
+          - title: Invited talks
+            dark: true
+            items:
+              - Transformer models for astronomical data — **IUCAA, Pune**
+              - AI/ML training programme — **ISRO ISTRAC**
+              - Skewed data distributions — **IIIT Allahabad**
+          - title: Research grants
+            items:
+              - ML prediction of PCOD likelihood — **VGST, Co-PI**
+              - Small language models as subject experts — **KSCST**
+              - Care-In-A-Cup assistive technology — **KSCST**
+          - title: Patents
+            items:
+              - Multimodal on-device emergency detection with indoor localization — **published**
+              - Optimizing emergency medical response through real-time data integration — **applied**
+      contact:
+        title: Get in touch
+        text: Prospective students and collaborators are welcome.
+        email: snigdha.sen@manipal.edu
+        address:
+          - School of Computer Engineering
+          - Manipal Institute of Technology Bengaluru, MAHE
+          - Bengaluru, Karnataka, India
     design:
-      background:
-        gradient_mesh:
-          enable: true
-      name:
-        size: md
-      avatar:
-        size: medium
-        shape: circle
-
-  - block: markdown
-    id: research
-    content:
-      title: Research
-      subtitle: ''
-      # DRAFT — Snigdha to review and expand.
-      text: |-
-        My research sits where machine learning meets large scientific datasets.
-
-        **Astroinformatics.** Sky surveys produce far more objects than can be measured spectroscopically. I develop deep learning models — from scalable neural networks on Spark to interpretable CNN-transformer hybrids — that estimate galaxy redshifts from photometry, handle heavily imbalanced astronomical data, and cluster galaxy images, as well as language models for textual astronomical data.
-
-        **Explainable AI for space science.** I work on making deep models trustworthy for safety-critical settings such as satellite telemetry anomaly detection.
-
-        **Computer vision and deep learning.** With my students I build CNN, U-Net and transformer models for image steganography, medical image segmentation, object detection and video captioning.
-
-        **Big data and applied AI.** I study scalable data processing with Spark and apply machine learning in healthcare, materials science and social good — work that has led to funded projects and patents in emergency-response systems.
-
-        I guide 4 doctoral scholars at MAHE, along with M.Tech and B.Tech projects. Students and collaborators interested in these areas are welcome to get in touch.
-    design:
-      columns: '1'
-
-  - block: collection
-    id: papers
-    content:
-      title: Featured Publications
-      filters:
-        folders:
-          - publications
-        featured_only: true
-    design:
-      view: article-grid
-      columns: 3
-
-  - block: collection
-    content:
-      title: Recent Publications
-      text: ''
-      filters:
-        folders:
-          - publications
-        exclude_featured: false
-    design:
-      view: citation
+      spacing:
+        padding: ['0', '0', '0', '0']
 ---
