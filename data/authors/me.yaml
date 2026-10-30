@@ -1,0 +1,82 @@
+schema: hugoblox/author/v1
+slug: me
+is_owner: true
+name:
+  display: Dr. Snigdha Sen
+  given: Snigdha
+  family: Sen
+postnominals:
+  - PhD
+role: Assistant Professor (Senior Scale), School of Computer Engineering
+# DRAFT bio built from public profiles — Snigdha to rewrite in her own words.
+bio: |
+  Dr. Snigdha Sen is an Assistant Professor (Senior Scale) in the School of
+  Computer Engineering at Manipal Institute of Technology Bengaluru, MAHE.
+  Her research applies deep learning and data science to large scientific
+  datasets, with a focus on astronomical data analysis such as photometric
+  redshift estimation. She is a life member of the Computer Society of India.
+
+affiliations:
+  - name: Manipal Institute of Technology Bengaluru, MAHE
+    url: https://www.manipal.edu/faculty/snigdha-sen
+
+links:
+  # Switch to hello@snigdhasen.in once email forwarding is set up.
+  - icon: at-symbol
+    url: mailto:snigdha.sen@manipal.edu
+    label: E-mail
+  - icon: academicons/google-scholar
+    url: https://scholar.google.com/citations?user=u5dq7NMAAAAJ
+  - icon: academicons/orcid
+    url: https://orcid.org/0000-0001-7909-5193
+  - icon: academicons/scopus
+    url: https://www.scopus.com/authid/detail.uri?authorId=57223155667
+  # TODO: add LinkedIn / GitHub if she wants them
+  # - icon: brands/linkedin
+  #   url: https://www.linkedin.com/in/...
+
+interests:
+  - Deep Learning
+  - Data Science
+  - Astronomical Data Analysis
+
+# TODO (Snigdha): add institutes, years and PhD thesis title.
+education:
+  - degree: PhD
+    institution: ''
+  - degree: M.Tech
+    institution: ''
+  - degree: B.E.
+    institution: ''
+
+# TODO (Snigdha): confirm titles and add start/end dates (YYYY-MM-DD).
+experience:
+  - role: Assistant Professor (Senior Scale)
+    org: Manipal Institute of Technology Bengaluru, MAHE
+  - role: Associate Professor
+    org: Global Academy of Technology, Bengaluru
+  - role: Lecturer
+    org: AIEMD, Durgapur
+  - role: Guest Lecturer
+    org: University Institute of Technology, Burdwan
+  - role: Programmer Analyst Trainee
+    org: Cognizant
+
+# TODO (Snigdha): confirm each award and whether she was participant or mentor.
+awards:
+  - title: Winner, National-level Ideathon
+    awarder: VVCE IEEE Computer Society Student Chapter
+    date: "2021-06-01"
+    summary: Preserving the street vendor tradition of India and optimising their profit post-COVID-19 — a web app using data analytics.
+    icon: hero/trophy
+  - title: Winner, Paper Presentation
+    awarder: 34th CSI Karnataka State Student Convention
+    date: "2020-12-01"
+    summary: "Working with Docker: The New Industry Need."
+    icon: hero/trophy
+  # TODO: add the date, then uncomment (without a date it shows as "Present").
+  # - title: Selected for State-level Exhibition
+  #   awarder: KSCST and VTU
+  #   date: "YYYY-MM-DD"
+  #   summary: "Care-In-A-Cup: a solution to tend to the needs of differently abled women."
+  #   icon: hero/trophy
