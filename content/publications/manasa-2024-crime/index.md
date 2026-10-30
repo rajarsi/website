@@ -2,7 +2,7 @@
 title: Interpretable Predictions for crime categories using log loss approach for
   imbalanced target feature
 authors:
-- Manasa A
+- M. Manasa
 - me
 date: '2024-03-01'
 publishDate: '2026-10-30T15:32:00.789475Z'
