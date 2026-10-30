@@ -100,6 +100,37 @@ h1,h2,h3,.font-serif{font-family:'EB Garamond',Georgia,serif}
 .view-citation .pub-icon{display:none}
 @media (max-width:640px){.space-y-3:has(> .view-citation){padding:0 16px}.view-citation{padding-left:2.4rem}}
 
+/* ---------- Phones only (desktop and tablet unchanged) ---------- */
+.sh-mob{display:none}
+@media (max-width:640px){
+  .sh-desk{display:none}
+  .sh-mob{display:block}
+  /* Hero: round photo first, centred, fits one screen */
+  .sh-hero .sh-wrap{flex-direction:column;align-items:center;gap:0;text-align:center}
+  .sh-portrait{order:-1;flex:none;min-width:0;padding-top:28px}
+  .sh-portrait::before{display:none}
+  .sh-portrait img{width:168px!important;height:168px!important;border-radius:50%!important;object-position:center!important;border:4px solid var(--sen-saffron);background:#FFFBFF}
+  .sh-hero-text{flex:none;width:100%;padding:18px 0 32px!important;gap:14px;align-items:center}
+  .sh-hero-eyebrow{display:none}
+  .sh-hero h1{font-size:44px!important}
+  .sh-role{font-size:17px}
+  .sh-aff{font-size:15px;margin-top:4px!important}
+  .sh-statement{font-size:16px;line-height:1.55;margin-top:2px!important}
+  .sh-buttons{width:100%;flex-wrap:nowrap;gap:10px;margin-top:4px}
+  .sh-btn{flex:1 1 0;justify-content:center;padding:13px 10px;font-size:15px}
+  .sh-btn svg{display:none}
+  /* Profile links as 44px tap targets */
+  .sh-links{width:100%;display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:8px;margin-top:4px}
+  .sh-links a{display:flex;align-items:center;justify-content:center;min-height:44px;padding:0 6px;border:1px solid #3B4D6B;border-radius:8px;font-size:13px}
+  .sh-links a:first-child{grid-column:1/-1}
+  /* Research, papers and highlights: swipeable rows */
+  .sh-cards4,.sh-cards3{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin:0 -24px;padding:0 24px 10px;scrollbar-width:none}
+  .sh-cards4::-webkit-scrollbar,.sh-cards3::-webkit-scrollbar{display:none}
+  .sh-cards4>*,.sh-cards3>*{flex:0 0 82%;scroll-snap-align:start}
+  .sh-card svg{height:96px}
+  .sh-swipe-hint{display:block}
+}
+
 @media (max-width:640px){
   .sh-hero-text{padding:56px 0 24px}
   .sh-hero h1{font-size:52px}

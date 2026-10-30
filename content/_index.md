@@ -14,6 +14,7 @@ sections:
       eyebrow: Astroinformatics · Deep Learning · Explainable AI
       role: Senior Assistant Professor, School of Computer Engineering
       statement: I apply deep learning and explainable AI to astronomical big data and space science — from estimating galaxy redshifts to making models trustworthy for satellite systems.
+      statement_short: Deep learning and explainable AI for astronomical big data and space science.
       portrait: portrait.jpg
       buttons:
         - text: Download CV

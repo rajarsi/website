@@ -20,7 +20,8 @@
         {{ with $c.role }}<p class="sh-role">{{ . }}</p>{{ else }}{{ with $profile.role }}<p class="sh-role">{{ . }}</p>{{ end }}{{ end }}
         {{ range first 1 $profile.affiliations }}<p class="sh-aff">{{ .name }}</p>{{ end }}
       </div>
-      {{ with $c.statement }}<p class="sh-statement">{{ . | markdownify }}</p>{{ end }}
+      {{ with $c.statement }}<p class="sh-statement{{ if $c.statement_short }} sh-desk{{ end }}">{{ . | markdownify }}</p>{{ end }}
+      {{ with $c.statement_short }}<p class="sh-statement sh-mob">{{ . | markdownify }}</p>{{ end }}
       <div class="sh-buttons">
         {{ range $c.buttons }}
         <a class="sh-btn {{ if eq .style "outline" }}sh-btn-outline{{ else }}sh-btn-primary{{ end }}" href="{{ .url | relURL }}" {{ if strings.HasSuffix .url ".pdf" }}target="_blank" rel="noopener"{{ end }}>
@@ -51,7 +52,11 @@
       {{ with resources.Get (printf "media/%s" .) }}
         {{ $img := .Resize "840x webp q85" }}
         <div class="sh-portrait">
-          <img src="{{ $img.RelPermalink }}" width="420" height="560" alt="Portrait of {{ $profile.title }}" fetchpriority="high">
+          <picture>
+            {{/* Phones get the square head-and-shoulders crop, shown as a round photo above the name. */}}
+            {{ with resources.Get "media/authors/me.png" }}<source media="(max-width: 640px)" srcset="{{ (.Fill "360x360 Center webp q85").RelPermalink }}" width="180" height="180">{{ end }}
+            <img src="{{ $img.RelPermalink }}" width="420" height="560" alt="Portrait of {{ $profile.title }}" fetchpriority="high">
+          </picture>
         </div>
       {{ end }}
     {{ end }}
