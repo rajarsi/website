@@ -1,5 +1,7 @@
 # snigdhasen.in
 
+Live at https://snigdhasen.in (GitHub Pages; DNS at GoDaddy: four A records to GitHub Pages IPs, CNAME www → rajarsi.github.io).
+
 Personal academic website of Dr. Snigdha Sen, built with Hugo and the HugoBlox Academic CV template. Deploys to GitHub Pages on every push to `main`.
 
 ## Edit common things

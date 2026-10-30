@@ -24,7 +24,6 @@ affiliations:
     url: https://www.manipal.edu/faculty/snigdha-sen
 
 links:
-  # Switch to hello@snigdhasen.in once email forwarding is set up.
   - icon: at-symbol
     url: mailto:snigdha.sen@manipal.edu
     label: E-mail
