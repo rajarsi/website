@@ -46,16 +46,19 @@ interests:
 education:
   - degree: PhD, Data Science & Deep Learning
     institution: Indian Institute of Information Technology Allahabad
+    year: '2019–2024'
     start: 2019-01-01
     end: 2024-12-31
     summary: |
       Supervised by Prof. Pavan Chakraborty and Dr. Krishna Pratap Singh.
   - degree: M.Tech, Information Technology
     institution: Jadavpur University, Kolkata
+    year: '2007–2009'
     start: 2007-01-01
     end: 2009-12-31
   - degree: B.E., Information Technology
     institution: University Institute of Technology, University of Burdwan
+    year: '2001–2005'
     start: 2001-01-01
     end: 2005-12-31
 

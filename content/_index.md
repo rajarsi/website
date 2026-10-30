@@ -13,6 +13,9 @@ sections:
       button:
         text: Download CV
         url: uploads/resume.pdf
+      button2:
+        text: Speaker Profile
+        url: uploads/speaker-profile.pdf
       headings:
         about: ''
         education: ''
