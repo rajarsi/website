@@ -37,13 +37,15 @@ sections:
       text: |-
         My research sits where machine learning meets large scientific datasets.
 
-        **Astronomical data analysis.** Sky surveys produce far more objects than can be measured spectroscopically. I work on deep learning models that estimate galaxy redshifts from photometry quickly, robustly and energy-efficiently — including adaptive learning-rate methods and scalable training on cloud-based Spark platforms — and on language models for analysing textual astronomical data.
+        **Astroinformatics.** Sky surveys produce far more objects than can be measured spectroscopically. I develop deep learning models — from scalable neural networks on Spark to interpretable CNN-transformer hybrids — that estimate galaxy redshifts from photometry, handle heavily imbalanced astronomical data, and cluster galaxy images, as well as language models for textual astronomical data.
 
-        **Deep learning for vision and language.** With my students I develop CNN, U-Net and transformer models for image steganography and data protection, video captioning, and hyperspectral imaging.
+        **Explainable AI for space science.** I work on making deep models trustworthy for safety-critical settings such as satellite telemetry anomaly detection.
 
-        **Trustworthy AI in applied domains.** I am interested in explainable deep learning for safety-critical systems such as satellite telemetry, and in AI for healthcare, from leukemia classification to secure patient-care systems.
+        **Computer vision and deep learning.** With my students I build CNN, U-Net and transformer models for image steganography, medical image segmentation, object detection and video captioning.
 
-        Students and collaborators interested in these areas are welcome to get in touch.
+        **Big data and applied AI.** I study scalable data processing with Spark and apply machine learning in healthcare, materials science and social good — work that has led to funded projects and patents in emergency-response systems.
+
+        I guide PhD scholars and M.Tech and B.Tech projects. Students and collaborators interested in these areas are welcome to get in touch.
     design:
       columns: '1'
 

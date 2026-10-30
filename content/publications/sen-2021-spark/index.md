@@ -17,5 +17,5 @@ tags:
 - Photometric Redshift
 - Neural Networks
 - Spark
-featured: true
+featured: false
 ---

@@ -13,15 +13,12 @@ Personal academic website of Dr. Snigdha Sen, built with Hugo and the HugoBlox A
 | Menu | `config/_default/menus.yaml` |
 | Publications | `publications.bib`, then `academic import publications.bib content/publications/ --compact` (or push — the import workflow opens a PR). Change her name to `me` in each new paper's `authors:` list. |
 
-## Still to do before launch (Snigdha)
+## Still to do (Snigdha)
 
-- [ ] Rewrite the bio in `me.yaml` in her own words
-- [ ] Add degree institutes, years and PhD thesis title
-- [ ] Confirm job titles and add start/end dates; then re-enable the Experience menu item
-- [ ] Confirm the awards (participant or mentor?) and add the KSCST date
-- [ ] Add a headshot and CV PDF
-- [ ] Check co-authors on the pre-2021 papers (from ORCID, no DOI) and remove any she doesn't want listed
-- [ ] Review the Research text on the home page
+- [ ] Review the bio (`me.yaml`) and Research text (`content/_index.md`) — drafted from her CV and brief profile
+- [ ] Add the KSCST/VTU exhibition date for Care-In-A-Cup to show it under Awards
+- [ ] Decide whether to publish a CV PDF (remove phone and address first), then re-enable the button
+- [ ] Check co-authors on the pre-2021 papers (from ORCID, no DOI)
 
 ## Run locally
 

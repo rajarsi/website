@@ -16,5 +16,5 @@ tags:
 - Photometric Redshift
 - Deep Learning
 - Astronomical Data Analysis
-featured: true
+featured: false
 ---

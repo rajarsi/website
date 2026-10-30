@@ -7,14 +7,17 @@ name:
   family: Sen
 postnominals:
   - PhD
-role: Assistant Professor (Senior Scale), School of Computer Engineering
-# DRAFT bio built from public profiles — Snigdha to rewrite in her own words.
+role: Senior Assistant Professor, School of Computer Engineering
 bio: |
-  Dr. Snigdha Sen is an Assistant Professor (Senior Scale) in the School of
-  Computer Engineering at Manipal Institute of Technology Bengaluru, MAHE.
-  Her research applies deep learning and data science to large scientific
-  datasets, with a focus on astronomical data analysis such as photometric
-  redshift estimation. She is a life member of the Computer Society of India.
+  Dr. Snigdha Sen is a Senior Assistant Professor in the School of Computer
+  Engineering at Manipal Institute of Technology Bengaluru, MAHE, with around
+  16 years of teaching experience. Before joining Manipal she was an Associate
+  Professor at Global Academy of Technology, Bengaluru. She holds a PhD from
+  IIIT Allahabad, an M.Tech in Information Technology from Jadavpur University
+  and a B.E. from UIT, University of Burdwan. Her research spans
+  astroinformatics, deep learning, computer vision, explainable AI for space
+  science and big data analytics. She has published over 40 SCI- and
+  Scopus-indexed papers and is a life member of the Computer Society of India.
 
 affiliations:
   - name: Manipal Institute of Technology Bengaluru, MAHE
@@ -31,38 +34,52 @@ links:
     url: https://orcid.org/0000-0001-7909-5193
   - icon: academicons/scopus
     url: https://www.scopus.com/authid/detail.uri?authorId=57223155667
-  # TODO: add LinkedIn / GitHub if she wants them
-  # - icon: brands/linkedin
-  #   url: https://www.linkedin.com/in/...
 
 interests:
+  - Astroinformatics
   - Deep Learning
-  - Data Science
-  - Astronomical Data Analysis
+  - Computer Vision
+  - Explainable AI for Space Science
+  - Big Data Analytics
+  - Image Steganography
 
-# TODO (Snigdha): add institutes, years and PhD thesis title.
 education:
-  - degree: PhD
-    institution: ''
-  - degree: M.Tech
-    institution: ''
-  - degree: B.E.
-    institution: ''
+  - degree: PhD, Data Science & Deep Learning
+    institution: Indian Institute of Information Technology Allahabad
+    start: 2019-01-01
+    end: 2024-12-31
+    summary: |
+      Supervised by Prof. Pavan Chakraborty and Dr. Krishna Pratap Singh.
+  - degree: M.Tech, Information Technology
+    institution: Jadavpur University, Kolkata
+    start: 2007-01-01
+    end: 2009-12-31
+  - degree: B.E., Information Technology
+    institution: University Institute of Technology, University of Burdwan
+    start: 2001-01-01
+    end: 2005-12-31
 
-# TODO (Snigdha): confirm titles and add start/end dates (YYYY-MM-DD).
 experience:
-  - role: Assistant Professor (Senior Scale)
+  - role: Senior Assistant Professor
     org: Manipal Institute of Technology Bengaluru, MAHE
+    start: 2024-03-01
+    summary: |
+      Teaching and research in the School of Computer Engineering; Research Coordinator. Guides PhD scholars and M.Tech and B.Tech projects.
   - role: Associate Professor
     org: Global Academy of Technology, Bengaluru
-  - role: Lecturer
-    org: AIEMD, Durgapur
-  - role: Guest Lecturer
-    org: University Institute of Technology, Burdwan
+    start: 2011-08-01
+    end: 2024-02-29
+    summary: |
+      Organised conferences, workshops and faculty development programmes; resource person for Machine Learning, Deep Learning, Big Data and Cloud Computing workshops.
   - role: Programmer Analyst Trainee
-    org: Cognizant
+    org: Cognizant Technology Solutions, Kolkata
+    start: 2010-02-01
+    end: 2010-06-30
+  - role: Lecturer, Computer Science
+    org: Aryabhatta Institute of Engineering & Management, Durgapur
+    start: 2005-07-01
+    end: 2007-07-31
 
-# TODO (Snigdha): confirm each award and whether she was participant or mentor.
 awards:
   - title: Winner, National-level Ideathon
     awarder: VVCE IEEE Computer Society Student Chapter
@@ -70,11 +87,11 @@ awards:
     summary: Preserving the street vendor tradition of India and optimising their profit post-COVID-19 — a web app using data analytics.
     icon: hero/trophy
   - title: Winner, Paper Presentation
-    awarder: 34th CSI Karnataka State Student Convention
+    awarder: 34th CSI Karnataka State Student Convention, KSIT Bengaluru
     date: "2020-12-01"
     summary: "Working with Docker: The New Industry Need."
     icon: hero/trophy
-  # TODO: add the date, then uncomment (without a date it shows as "Present").
+  # Exhibition date not in her CV — add it, then uncomment (no date shows "Present").
   # - title: Selected for State-level Exhibition
   #   awarder: KSCST and VTU
   #   date: "YYYY-MM-DD"
