@@ -8,7 +8,7 @@ Personal academic website of Dr. Snigdha Sen, built with Hugo and the HugoBlox A
 | --- | --- |
 | Bio, education, experience, awards, profile links | `data/authors/me.yaml` |
 | Photo | `assets/media/authors/me.png` (square, ≥ 800 px) |
-| CV | `static/uploads/resume.pdf`, then re-enable the button in `content/_index.md` |
+| CV | Edit `cv/Snigdha_Sen_Academic_CV.docx` (or rebuild with `node cv/build_cv.js`), export to PDF and save as `static/uploads/resume.pdf` |
 | Research text, home page sections | `content/_index.md` |
 | Menu | `config/_default/menus.yaml` |
 | Publications | `publications.bib`, then `academic import publications.bib content/publications/ --compact` (or push — the import workflow opens a PR). Change her name to `me` in each new paper's `authors:` list. |

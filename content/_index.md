@@ -44,7 +44,7 @@ sections:
 
         **Big data and applied AI.** I study scalable data processing with Spark and apply machine learning in healthcare, materials science and social good — work that has led to funded projects and patents in emergency-response systems.
 
-        I guide PhD scholars and M.Tech and B.Tech projects. Students and collaborators interested in these areas are welcome to get in touch.
+        I guide 4 doctoral scholars at MAHE, along with M.Tech and B.Tech projects. Students and collaborators interested in these areas are welcome to get in touch.
     design:
       columns: '1'
 
