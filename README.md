@@ -17,7 +17,6 @@ Personal academic website of Dr. Snigdha Sen, built with Hugo and the HugoBlox A
 
 - [ ] Review the bio (`me.yaml`) and Research text (`content/_index.md`) — drafted from her CV and brief profile
 - [ ] Add the KSCST/VTU exhibition date for Care-In-A-Cup to show it under Awards
-- [ ] Decide whether to publish a CV PDF (remove phone and address first), then re-enable the button
 - [ ] Check co-authors on the pre-2021 papers (from ORCID, no DOI)
 
 ## Run locally

@@ -10,10 +10,9 @@ sections:
     content:
       username: me
       text: ''
-      # TODO: re-enable once her CV is saved as static/uploads/resume.pdf
-      # button:
-      #   text: Download CV
-      #   url: uploads/resume.pdf
+      button:
+        text: Download CV
+        url: uploads/resume.pdf
       headings:
         about: ''
         education: ''
