@@ -31,7 +31,7 @@ sections:
         **Patents**
 
         - A system and method for multimodal on-device emergency detection with indoor localization and alerts — *published*
-        - A system and method for optimizing emergency medical response through real-time data integration — *applied*
+        - A system and method for optimizing emergency medical response through real-time data integration — *published*
 
         **Proposals under review**
 
@@ -43,11 +43,13 @@ sections:
   - block: markdown
     id: talks
     content:
-      title: Invited Talks & Service
+      title: Invited Talks, Editorial & Service
       text: |-
         - Guest talk on transformer-based models for astronomical data, organised by **IUCAA, Pune**
         - AI/ML training programme for **ISRO ISTRAC**
         - Guest lecture on skewed data distributions at **IIIT Allahabad**
+        - Deep Learning & its Application — **IIIT Lucknow**
+        - Editorial board member, **The Visual Computer** and **Frontiers in Big Data**
         - Session chair at international conferences in India and abroad
         - Organised conferences, workshops and faculty development programmes at Global Academy of Technology
         - Lead editorial member for two upcoming books

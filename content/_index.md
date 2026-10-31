@@ -34,7 +34,7 @@ sections:
         - value: '2'
           label: patents
       about:
-        title: Teacher, researcher, mentor
+        title: Academician, researcher, mentor
         text: |-
           Dr. Snigdha Sen is a Senior Assistant Professor in the School of Computer Engineering at Manipal Institute of Technology Bengaluru, with around 16 years of teaching experience. Before joining Manipal she was an Associate Professor at Global Academy of Technology, Bengaluru.
 
@@ -57,7 +57,7 @@ sections:
       featured:
         title: Featured papers
       highlights:
-        title: Talks, grants and patents
+        title: Talks, grants, patents and editorial roles
         more_url: experience/
         cards:
           - title: Invited talks
@@ -66,6 +66,7 @@ sections:
               - Transformer models for astronomical data — **IUCAA, Pune**
               - AI/ML training programme — **ISRO ISTRAC**
               - Skewed data distributions — **IIIT Allahabad**
+              - Deep Learning & its Application — **IIIT Lucknow**
           - title: Research grants
             items:
               - ML prediction of PCOD likelihood — **VGST, Co-PI**
@@ -74,7 +75,11 @@ sections:
           - title: Patents
             items:
               - Multimodal on-device emergency detection with indoor localization — **published**
-              - Optimizing emergency medical response through real-time data integration — **applied**
+              - Optimizing emergency medical response through real-time data integration — **published**
+          - title: Editorial board
+            items:
+              - Editorial board member — **The Visual Computer**
+              - Editorial board member — **Frontiers in Big Data**
       contact:
         title: Get in touch
         text: Prospective students and collaborators are welcome.

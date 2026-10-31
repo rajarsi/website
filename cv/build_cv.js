@@ -161,7 +161,8 @@ const children = [
   bullet([t("40+ publications in SCI/Scopus-indexed journals and conferences, including "), t("New Astronomy", { italics: true }), t(", "), t("Experimental Astronomy", { italics: true }), t(", "), t("Signal, Image and Video Processing", { italics: true }), t(" and "), t("Multimedia Tools and Applications", { italics: true }), t(".")]),
   bullet([t("Two patents in emergency-response systems; funded projects from VGST and KSCST.")]),
   bullet([t("Guides 4 doctoral scholars at MAHE; has supervised 10+ M.Tech theses and 35+ undergraduate projects.")]),
-  bullet([t("Invited speaker at IUCAA Pune, ISRO ISTRAC and IIIT Allahabad.")]),
+  bullet([t("Invited speaker at IUCAA Pune, ISRO ISTRAC, IIIT Allahabad and IIIT Lucknow.")]),
+  bullet([t("Editorial board member: "), t("The Visual Computer", { italics: true }), t("; "), t("Frontiers in Big Data", { italics: true }), t(".")]),
 
   heading("Academic Appointments"),
   ...entry("Senior Assistant Professor", "Mar 2024 – present", "Manipal Institute of Technology Bengaluru, MAHE", "School of Computer Engineering; Research Coordinator."),
@@ -187,7 +188,7 @@ const children = [
 
   heading("Patents"),
   bullet([t("A system and method for multimodal on-device emergency detection with indoor localization and alerts. "), t("Published.", { italics: true })]),
-  bullet([t("A system and method for optimizing emergency medical response through real-time data integration. "), t("Applied.", { italics: true })]),
+  bullet([t("A system and method for optimizing emergency medical response through real-time data integration. "), t("Published.", { italics: true })]),
   sub("Proposals under review"),
   bullet([t("Investigation of the Baby Dragon Hatchling (BDH) architecture for satellite remote sensing image applications — ISRO RESPOND.")]),
   bullet([t("A data-driven and sustainable AI/ML solution for enhancing rural education in Karnataka — VGST.")]),
@@ -202,8 +203,10 @@ const children = [
   bullet([t("Transformer-based models for astronomical data — guest talk, "), t("IUCAA, Pune", { bold: true }), t(".")]),
   bullet([t("AI/ML training programme — "), t("ISRO Telemetry, Tracking and Command Network (ISTRAC)", { bold: true }), t(".")]),
   bullet([t("Skewed data distributions — guest lecture, "), t("IIIT Allahabad", { bold: true }), t(".")]),
+  bullet([t("Deep Learning & its Application — invited talk, "), t("IIIT Lucknow", { bold: true }), t(".")]),
 
   heading("Professional Service"),
+  bullet([t("Editorial board member, "), t("The Visual Computer", { italics: true }), t(" and "), t("Frontiers in Big Data", { italics: true }), t(".")]),
   bullet([t("Session chair at international conferences in India and abroad.")]),
   bullet([t("Lead editorial member for two forthcoming edited books.")]),
   bullet([t("Organiser and resource person for conferences, workshops and faculty development programmes.")]),
@@ -224,7 +227,7 @@ const doc = new Document({
     config: [{ reference: "bullets", levels: [{ level: 0, format: LevelFormat.BULLET, text: "•", alignment: AlignmentType.LEFT, style: { paragraph: { indent: { left: 360, hanging: 240 } } } }] }],
   },
   sections: [{
-    properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 1020, bottom: 1020, left: 1134, right: 1134 } } },
+    properties: { page: { size: { width: 11906, height: 16838 }, margin: { top: 850, bottom: 850, left: 1134, right: 1134 } } },
     footers: {
       default: new Footer({
         children: [new Paragraph({
