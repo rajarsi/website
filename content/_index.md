@@ -30,7 +30,7 @@ sections:
         - value: '40+'
           label: SCI / Scopus publications
         - value: '4'
-          label: doctoral scholars guided
+          label: doctoral scholars currently guiding
         - value: '2'
           label: patents
       about:
