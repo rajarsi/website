@@ -27,8 +27,8 @@ sections:
       stats:
         - value: '16'
           label: years of teaching
-        - value: '40+'
-          label: SCI / Scopus publications
+        - value: '46'
+          label: Scopus-indexed publications
         - value: '4'
           label: doctoral scholars currently guiding
         - value: '2'

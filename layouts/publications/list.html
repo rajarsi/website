@@ -57,7 +57,7 @@
           {{- end -}}
           {{- if lt $cut $na }}<button type="button" class="pb-more" data-more>and {{ sub $na $cut }} more authors</button>{{ end -}}
         </p>
-        <p class="pb-venue">{{ with $venue }}{{ . | markdownify }}{{ end }} {{ with $month }}{{ . }} {{ end }}{{ $p.Date.Year }}</p>
+        <p class="pb-venue">{{ with $venue }}{{ . | markdownify }}{{ end }} {{ with $month }}{{ . }} {{ end }}{{ $p.Date.Year }}{{ with $p.Params.publication_status }} · <span class="pb-status">{{ . }}</span>{{ end }}</p>
         <div class="pb-links">
           {{ with .Params.abstract }}<button type="button" class="pb-btn" data-panel="abs-{{ $id }}" aria-expanded="false">Abs</button>{{ end }}
           {{ with .Params.doi }}<a class="pb-btn" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}
