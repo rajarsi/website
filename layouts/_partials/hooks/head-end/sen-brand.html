@@ -94,12 +94,48 @@ h1,h2,h3,.font-serif{font-family:'EB Garamond',Georgia,serif}
 .sh-contact p{font-size:16px;color:var(--sen-mist);line-height:1.6}
 .sh-contact a{font-size:17px;font-weight:600;color:var(--sen-saffron)}
 
-/* Publications page: numbered list [1], [2], ... */
-.space-y-3:has(> .view-citation){counter-reset:pub}
-.view-citation{counter-increment:pub;position:relative;padding-left:3rem}
-.view-citation::before{content:"[" counter(pub) "]";position:absolute;left:0;top:0;font-weight:600;color:var(--sen-clay);font-variant-numeric:tabular-nums}
-.view-citation .pub-icon{display:none}
-@media (max-width:640px){.space-y-3:has(> .view-citation){padding:0 16px}.view-citation{padding-left:2.4rem}}
+/* ---------- Publications page (al-folio style) ---------- */
+.pb{max-width:980px;margin:0 auto;padding:56px 24px 88px;color:var(--sen-ink)}
+.pb-head h1{margin:0;font-size:52px;font-weight:600;line-height:1.05;color:var(--sen-navy)}
+.pb-intro{margin:14px 0 0;max-width:680px;font-size:16px;line-height:1.65;color:var(--sen-muted)}
+.pb-intro a{color:#1E3A5F;font-weight:600}
+.pb-legend{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.pb-year{margin:56px 0 4px;padding-bottom:6px;border-bottom:1px solid var(--sen-line);text-align:right;font-family:'EB Garamond',Georgia,serif;font-size:40px;font-weight:600;line-height:1;color:#C9BFAF}
+.pb-list{list-style:none;margin:0;padding:0}
+.pb-item{display:grid;grid-template-columns:136px minmax(0,1fr);gap:22px;padding:22px 0;border-bottom:1px solid #EFE8DD;scroll-margin-top:88px}
+.pb-item:last-child{border-bottom:0}
+.pb-side{display:flex;flex-direction:column;align-items:center;gap:8px;padding-top:2px}
+.pb-badge{display:inline-block;width:100%;max-width:136px;padding:6px 8px;border-radius:6px;font-size:12px;font-weight:700;letter-spacing:.3px;line-height:1.25;text-align:center;color:#fff;background:var(--sen-navy)}
+.pb-legend .pb-badge{width:auto;padding:4px 10px}
+.pb-badge.c{background:var(--sen-clay)}
+.pb-badge.b{background:#E9A848;color:var(--sen-navy)}
+.pb-num{font-size:12px;font-weight:600;color:#9AA3B0;font-variant-numeric:tabular-nums}
+.pb-title{margin:0;font-family:'Public Sans',sans-serif;font-size:17px;font-weight:700;line-height:1.4}
+.pb-title a{color:var(--sen-navy);text-decoration:none}
+.pb-title a:hover{color:var(--sen-clay)}
+.pb-authors{margin:6px 0 0;font-size:15px;line-height:1.55;color:var(--sen-body)}
+.pb-me{font-weight:700;color:var(--sen-navy);text-decoration:underline;text-decoration-color:var(--sen-saffron);text-decoration-thickness:2px;text-underline-offset:3px}
+.pb-more{margin-left:4px;padding:0;border:0;background:none;font:inherit;color:#1E3A5F;text-decoration:underline dotted;cursor:pointer}
+.pb-venue{margin:4px 0 0;font-size:15px;color:var(--sen-muted)}
+.pb-venue p{display:inline;margin:0}
+.pb-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.pb-btn{display:inline-flex;align-items:center;min-height:30px;padding:0 12px;border:1px solid #C9D3E1;border-radius:6px;background:#fff;font:inherit;font-size:12px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#1E3A5F!important;text-decoration:none!important;cursor:pointer;transition:border-color .15s,color .15s,background .15s}
+.pb-btn:hover,.pb-btn.on{border-color:var(--sen-clay);color:var(--sen-clay)!important}
+.pb-btn.on{background:#FBEFE9}
+.pb-panel{position:relative;margin-top:12px;padding:14px 16px;border:1px solid var(--sen-line);border-radius:8px;background:#fff}
+.pb-abs p{margin:0;font-size:15px;line-height:1.7;color:var(--sen-body)}
+.pb-bib{background:#F7F3EC}
+.pb-bib pre{margin:0;overflow-x:auto;font-size:12.5px;line-height:1.55;color:var(--sen-ink);font-variant-ligatures:none}
+.pb-copy{position:absolute;top:8px;right:8px;padding:3px 10px;border:1px solid #C9D3E1;border-radius:5px;background:#fff;font-size:12px;font-weight:600;color:#1E3A5F;cursor:pointer}
+@media (max-width:640px){
+  .pb{padding:36px 16px 64px}
+  .pb-head h1{font-size:40px}
+  .pb-year{margin-top:40px;font-size:32px}
+  .pb-item{grid-template-columns:minmax(0,1fr);gap:10px;padding:18px 0}
+  .pb-side{flex-direction:row;align-items:center}
+  .pb-badge{width:auto;padding:4px 10px}
+  .pb-btn{min-height:36px}
+}
 
 /* ---------- Phones only (desktop and tablet unchanged) ---------- */
 .sh-mob{display:none}

@@ -1,0 +1,97 @@
+{{ define "main" }}
+{{/*
+  Publications list, styled after the al-folio academic theme:
+  grouped by year, a venue badge on the left (colour = type), title, authors with
+  her name highlighted, venue and date, then Abs / DOI / PDF / Code / Bib buttons.
+  Per paper (content/publications/<slug>/index.md):
+    publication_short  text on the badge (e.g. 'New Astron.')
+    abstract           enables the Abs button
+    url_pdf, url_code  enable the PDF / Code buttons
+  The Bib button shows that paper's cite.bib.
+*/}}
+{{ $profile := partial "functions/get_author_profile" "me" }}
+{{ $me := $profile.title | replaceRE "^Dr\\.\\s*" "" }}
+{{ $pubs := .Pages.ByDate.Reverse }}
+{{ $types := dict "article-journal" (dict "k" "j" "label" "Journal") "paper-conference" (dict "k" "c" "label" "Conference") "chapter" (dict "k" "b" "label" "Book chapter") }}
+{{ $count := dict "j" 0 "c" 0 "b" 0 }}
+{{ range $pubs }}{{ $t := index $types (index (.Params.publication_types | default (slice "article-journal")) 0) | default (dict "k" "j") }}{{ $count = merge $count (dict $t.k (add (index $count $t.k) 1)) }}{{ end }}
+
+<div class="pb">
+  <header class="pb-head">
+    <p class="sh-eyebrow">Research output</p>
+    <h1>Publications</h1>
+    <p class="pb-intro">{{ len $pubs }} publications, newest first: {{ index $count "j" }} journal articles, {{ index $count "c" }} conference papers and {{ index $count "b" }} book chapters.
+      {{ range $profile.links }}{{ if in (.icon | default "") "google-scholar" }}Citations are tracked on <a href="{{ .url }}" target="_blank" rel="noopener">Google Scholar</a>.{{ end }}{{ end }}</p>
+    <p class="pb-legend"><span class="pb-badge j">Journal</span><span class="pb-badge c">Conference</span><span class="pb-badge b">Book chapter</span></p>
+  </header>
+
+  {{ $n := 0 }}
+  {{ range $pubs.GroupByDate "2006" }}
+  <h2 class="pb-year">{{ .Key }}</h2>
+  <ol class="pb-list">
+    {{ range .Pages }}
+    {{ $n = add $n 1 }}
+    {{ $p := . }}
+    {{ $id := path.Base .File.Dir }}
+    {{ $t := index $types (index (.Params.publication_types | default (slice "article-journal")) 0) | default (dict "k" "j" "label" "Journal") }}
+    {{ $bib := .Resources.GetMatch "cite.bib" }}
+    {{ $month := "" }}
+    {{ with $bib }}{{ with findRESubmatch `month\s*=\s*\{?([A-Za-z]+)` .Content 1 }}{{ $month = substr (index (index . 0) 1) 0 3 }}{{ end }}{{ end }}
+    {{ $venue := .Params.publication | default "" }}
+    <li class="pb-item" id="{{ $id }}">
+      <div class="pb-side">
+        <span class="pb-badge {{ $t.k }}" title="{{ $t.label }}{{ with $venue }} · {{ . | markdownify | plainify }}{{ end }}">{{ .Params.publication_short | default $t.label }}</span>
+        <span class="pb-num">[{{ $n }}]</span>
+      </div>
+      <div class="pb-body">
+        <h3 class="pb-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{ $authors := .Params.authors | default slice }}
+        {{ $na := len $authors }}
+        {{ $cut := cond (gt $na 6) 3 $na }}
+        <p class="pb-authors">
+          {{- range $i, $a := $authors -}}
+            {{- if eq $i $cut }}<span class="pb-more-names" hidden>{{ end -}}
+            {{- if gt $i 0 }}{{ if eq (add $i 1) $na }}{{ if gt $na 2 }},{{ end }} and {{ else }}, {{ end }}{{ end -}}
+            {{- if eq $a "me" }}<span class="pb-me">{{ $me }}</span>{{ else }}{{ $a }}{{ end -}}
+            {{- if and (ge $i $cut) (eq (add $i 1) $na) }}</span>{{ end -}}
+          {{- end -}}
+          {{- if lt $cut $na }}<button type="button" class="pb-more" data-more>and {{ sub $na $cut }} more authors</button>{{ end -}}
+        </p>
+        <p class="pb-venue">{{ with $venue }}{{ . | markdownify }}{{ end }} {{ with $month }}{{ . }} {{ end }}{{ $p.Date.Year }}</p>
+        <div class="pb-links">
+          {{ with .Params.abstract }}<button type="button" class="pb-btn" data-panel="abs-{{ $id }}" aria-expanded="false">Abs</button>{{ end }}
+          {{ with .Params.doi }}<a class="pb-btn" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}
+          {{ with .Params.url_pdf }}<a class="pb-btn" href="{{ . }}" target="_blank" rel="noopener">PDF</a>{{ end }}
+          {{ with .Params.url_code }}<a class="pb-btn" href="{{ . }}" target="_blank" rel="noopener">Code</a>{{ end }}
+          {{ with $bib }}<button type="button" class="pb-btn" data-panel="bib-{{ $id }}" aria-expanded="false">Bib</button>{{ end }}
+          <a class="pb-btn" href="{{ .RelPermalink }}">Details</a>
+        </div>
+        {{ with .Params.abstract }}<div class="pb-panel pb-abs" id="abs-{{ $id }}" hidden><p>{{ . | markdownify }}</p></div>{{ end }}
+        {{ with $bib }}<div class="pb-panel pb-bib" id="bib-{{ $id }}" hidden><button type="button" class="pb-copy" data-copy="bib-{{ $id }}">Copy</button><pre><code>{{ .Content | strings.TrimSpace }}</code></pre></div>{{ end }}
+      </div>
+    </li>
+    {{ end }}
+  </ol>
+  {{ end }}
+</div>
+
+<script>
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('[data-panel]');
+  if (b) {
+    var p = document.getElementById(b.dataset.panel), open = p.hidden;
+    p.hidden = !open; b.setAttribute('aria-expanded', open); b.classList.toggle('on', open);
+    return;
+  }
+  var m = e.target.closest('[data-more]');
+  if (m) { m.previousElementSibling.hidden = false; m.remove(); return; }
+  var c = e.target.closest('[data-copy]');
+  if (c) {
+    var t = document.getElementById(c.dataset.copy).querySelector('code').textContent;
+    (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () {
+      c.textContent = 'Copied'; setTimeout(function () { c.textContent = 'Copy'; }, 1500);
+    }, function () {});
+  }
+});
+</script>
+{{ end }}

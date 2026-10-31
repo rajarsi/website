@@ -10,6 +10,7 @@ date: '2023-01-01'
 publishDate: '2026-10-30T15:06:41.478363Z'
 publication_types:
 - paper-conference
+publication_short: 'ICONIP'
 publication: '*Neural Information Processing (ICONIP 2022)*'
 doi: 10.1007/978-981-99-1642-9_11
 tags:

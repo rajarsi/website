@@ -9,6 +9,7 @@ date: '2026-04-01'
 publishDate: '2026-10-30T15:06:41.438532Z'
 publication_types:
 - article-journal
+publication_short: 'MTAP'
 publication: '*Multimedia Tools and Applications*'
 doi: 10.1007/s11042-026-21652-5
 abstract: Image steganography preserves privacy by embedding hidden information within

@@ -9,6 +9,7 @@ date: '2025-06-01'
 publishDate: '2026-10-30T15:32:00.762401Z'
 publication_types:
 - paper-conference
+publication_short: 'IEEE I2CACIS'
 publication: '*2025 IEEE International Conference on Automatic Control and Intelligent
   Systems (I2CACIS)*'
 doi: 10.1109/I2CACIS65476.2025.11100950

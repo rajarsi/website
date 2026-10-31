@@ -9,6 +9,7 @@ date: '2022-01-01'
 publishDate: '2026-10-30T15:06:41.493817Z'
 publication_types:
 - article-journal
+publication_short: 'Exp. Astron.'
 publication: '*Experimental Astronomy*'
 doi: 10.1007/s10686-021-09827-4
 tags:

@@ -8,6 +8,7 @@ date: '2026-06-01'
 publishDate: '2026-10-30T15:06:41.446187Z'
 publication_types:
 - article-journal
+publication_short: 'Discov. Appl. Sci.'
 publication: '*Discover Applied Sciences*'
 doi: 10.1007/s42452-026-09098-8
 abstract: Video captioning lets computers understand visual content and describe it

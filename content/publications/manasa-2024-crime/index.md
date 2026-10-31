@@ -8,6 +8,7 @@ date: '2024-03-01'
 publishDate: '2026-10-30T15:32:00.789475Z'
 publication_types:
 - paper-conference
+publication_short: 'IEEE InC4'
 publication: '*2024 IEEE International Conference on Contemporary Computing and Communications
   (InC4)*'
 doi: 10.1109/InC460750.2024.10649054

@@ -8,6 +8,7 @@ date: '2023-01-01'
 publishDate: '2026-10-30T15:06:41.483535Z'
 publication_types:
 - paper-conference
+publication_short: 'ICICSE'
 publication: '*Innovations in Computer Science and Engineering*'
 doi: 10.1007/978-981-19-7455-7_24
 tags:

@@ -7,5 +7,6 @@ date: '2017-04-01'
 publishDate: '2026-10-30T15:06:41.548303Z'
 publication_types:
 - article-journal
+publication_short: 'IJESRT'
 publication: '*International Journal of Engineering Sciences & Research Technology*'
 ---

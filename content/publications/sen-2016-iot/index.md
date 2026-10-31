@@ -6,5 +6,6 @@ date: '2016-04-01'
 publishDate: '2026-10-30T15:06:41.553567Z'
 publication_types:
 - paper-conference
+publication_short: 'IJERT'
 publication: '*International Journal of Engineering Research & Technology (IJERT)*'
 ---

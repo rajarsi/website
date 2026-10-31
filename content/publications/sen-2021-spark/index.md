@@ -10,6 +10,7 @@ date: '2021-01-01'
 publishDate: '2026-10-30T15:06:41.500788Z'
 publication_types:
 - paper-conference
+publication_short: 'IEA/AIE'
 publication: '*Advances and Trends in Artificial Intelligence. From Theory to Practice
   (IEA/AIE 2021)*'
 doi: 10.1007/978-3-030-79463-7_50
