@@ -1,0 +1,87 @@
+{{/*
+  Search and Google Scholar metadata.
+  - Home page: schema.org Person (name, role, affiliation, alma maters, topics,
+    and sameAs links to her Scholar/ORCID/Scopus profiles) so search engines
+    tie this site to her and not to other people with the same name.
+  - Publication pages: Highwire citation_* tags (what Google Scholar reads)
+    plus schema.org ScholarlyArticle.
+  Data comes from data/authors/me.yaml and each paper's front matter + cite.bib.
+*/}}
+{{ $me := index hugo.Data.authors "me" }}
+{{ $myName := "Snigdha Sen" }}
+{{ with $me }}{{ with .name }}{{ $myName = printf "%s %s" .given .family }}{{ end }}{{ end }}
+
+{{/* ---------- Home: Person ---------- */}}
+{{ if .IsHome }}
+  {{ $sameAs := slice }}
+  {{ range $me.links }}{{ if not (strings.HasPrefix .url "mailto:") }}{{ $sameAs = $sameAs | append .url }}{{ end }}{{ end }}
+  {{ range $me.affiliations }}{{ with .url }}{{ $sameAs = $sameAs | append . }}{{ end }}{{ end }}
+  {{ $email := "" }}
+  {{ range $me.links }}{{ if strings.HasPrefix .url "mailto:" }}{{ $email = strings.TrimPrefix "mailto:" .url }}{{ end }}{{ end }}
+  {{ $alumni := slice }}
+  {{ range $me.education }}{{ $alumni = $alumni | append (dict "@type" "CollegeOrUniversity" "name" .institution) }}{{ end }}
+  {{ $aff := slice }}
+  {{ range $me.affiliations }}{{ $aff = $aff | append (dict "@type" "CollegeOrUniversity" "name" .name "url" (.url | default "")) }}{{ end }}
+  {{ $person := dict
+      "@context" "https://schema.org"
+      "@type" "Person"
+      "@id" (printf "%s#person" site.BaseURL)
+      "name" $myName
+      "honorificPrefix" "Dr."
+      "jobTitle" $me.role
+      "url" site.BaseURL
+      "worksFor" $aff
+      "affiliation" $aff
+      "alumniOf" $alumni
+      "knowsAbout" $me.interests
+      "sameAs" $sameAs
+  }}
+  {{ with $email }}{{ $person = merge $person (dict "email" .) }}{{ end }}
+  {{ with resources.Get "media/authors/me.png" }}{{ $person = merge $person (dict "image" (.Fill "600x600 Center").Permalink) }}{{ end }}
+  {{ $page := dict "@context" "https://schema.org" "@type" "ProfilePage" "url" site.BaseURL "mainEntity" $person }}
+  <script type="application/ld+json">{{ $page | jsonify | safeJS }}</script>
+{{ end }}
+
+{{/* ---------- Publication pages: Google Scholar tags ---------- */}}
+{{ if and (eq .Section "publications") .IsPage }}
+  {{ $bib := "" }}
+  {{ with .Resources.GetMatch "cite.bib" }}{{ $bib = .Content }}{{ end }}
+  {{ $vol := "" }}{{ $iss := "" }}{{ $pages := "" }}{{ $pub := "" }}{{ $venue := "" }}
+  {{ with findRESubmatch `(?mi)^\s*volume\s*=\s*\{(.*?)\}` $bib 1 }}{{ $vol = index (index . 0) 1 }}{{ end }}
+  {{ with findRESubmatch `(?mi)^\s*number\s*=\s*\{(.*?)\}` $bib 1 }}{{ $iss = index (index . 0) 1 }}{{ end }}
+  {{ with findRESubmatch `(?mi)^\s*pages\s*=\s*\{(.*?)\}` $bib 1 }}{{ $pages = index (index . 0) 1 }}{{ end }}
+  {{ with findRESubmatch `(?mi)^\s*publisher\s*=\s*\{(.*?)\}` $bib 1 }}{{ $pub = index (index . 0) 1 }}{{ end }}
+  {{ $venue = .Params.publication | default "" | markdownify | plainify | htmlUnescape }}
+  {{ $type := index (.Params.publication_types | default (slice "")) 0 }}
+
+  <meta name="citation_title" content="{{ .Title }}">
+  {{ range .Params.authors }}
+  <meta name="citation_author" content="{{ if eq . "me" }}{{ $myName }}{{ else }}{{ . }}{{ end }}">
+  {{ end }}
+  <meta name="citation_publication_date" content="{{ .Date.Format "2006/01/02" }}">
+  {{ with $venue }}
+    {{ if eq $type "article-journal" }}<meta name="citation_journal_title" content="{{ . }}">
+    {{ else if eq $type "paper-conference" }}<meta name="citation_conference_title" content="{{ . }}">
+    {{ else }}<meta name="citation_inbook_title" content="{{ . }}">{{ end }}
+  {{ end }}
+  {{ with $vol }}<meta name="citation_volume" content="{{ . }}">{{ end }}
+  {{ with $iss }}<meta name="citation_issue" content="{{ . }}">{{ end }}
+  {{ with $pages }}
+    {{ $pp := split (replace . "--" "-") "-" }}
+    {{ if eq (len $pp) 2 }}<meta name="citation_firstpage" content="{{ index $pp 0 }}"><meta name="citation_lastpage" content="{{ index $pp 1 }}">
+    {{ else }}<meta name="citation_firstpage" content="{{ . }}">{{ end }}
+  {{ end }}
+  {{ with $pub }}<meta name="citation_publisher" content="{{ replace . `\&` "&" }}">{{ end }}
+  {{ with .Params.doi }}<meta name="citation_doi" content="{{ . }}">{{ end }}
+  <meta name="citation_abstract_html_url" content="{{ .Permalink }}">
+
+  {{ $authors := slice }}
+  {{ range .Params.authors }}
+    {{ if eq . "me" }}{{ $authors = $authors | append (dict "@type" "Person" "@id" (printf "%s#person" site.BaseURL) "name" $myName) }}
+    {{ else }}{{ $authors = $authors | append (dict "@type" "Person" "name" .) }}{{ end }}
+  {{ end }}
+  {{ $art := dict "@context" "https://schema.org" "@type" "ScholarlyArticle" "headline" .Title "name" .Title "author" $authors "datePublished" (.Date.Format "2006-01-02") "url" .Permalink }}
+  {{ with $venue }}{{ $art = merge $art (dict "isPartOf" (dict "@type" (cond (eq $type "article-journal") "Periodical" "CreativeWork") "name" .)) }}{{ end }}
+  {{ with .Params.doi }}{{ $art = merge $art (dict "sameAs" (printf "https://doi.org/%s" .) "identifier" (dict "@type" "PropertyValue" "propertyID" "DOI" "value" .)) }}{{ end }}
+  <script type="application/ld+json">{{ $art | jsonify | safeJS }}</script>
+{{ end }}
