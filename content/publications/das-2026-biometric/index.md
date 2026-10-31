@@ -4,7 +4,7 @@ authors:
 - "Abhijit Das"
 - "M. Satyanarayana"
 - "me"
-- "Shanthi M"
+- "M. Shanthi"
 date: '2026-01-01'
 publication_types:
 - paper-conference

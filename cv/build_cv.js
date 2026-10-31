@@ -67,6 +67,7 @@ const INDEX = {
   doddashamachar2023banana: "SCI, Scopus", dabhade2026steganography: "Scopus", sk2025unet: "Scopus",
   mahesh2024banana: "Scopus", madhavi2025bamboo: "Scopus", nithya2026telemetry: "SCIE, Scopus",
 };
+const SCOPUS = new Set(JSON.parse(fs.readFileSync(__dirname + "/scopus_keys.json", "utf8")));
 const tex = (s = "") => s.replace(/\\&/g, "&").replace(/--/g, "–");
 
 const pubPara = (p, n) => {
@@ -80,9 +81,10 @@ const pubPara = (p, n) => {
   if (p.number) runs.push(t(`, no. ${p.number}`));
   if (p.pages) runs.push(t(/–|--/.test(p.pages) ? `, pp. ${tex(p.pages)}` : `, art. ${p.pages}`));
   if (p.publisher && p.type !== "article") runs.push(t(`, ${p.publisher}`));
-  runs.push(t(`, ${p.year}.`));
+  runs.push(t(`, ${p.year}${p.note ? ` (${p.note.toLowerCase()})` : ""}.`));
   if (p.doi) runs.push(t(" "), link(`doi:${p.doi}`, `https://doi.org/${p.doi}`, { size: 18 }));
-  if (INDEX[p.key]) runs.push(t(`  [${INDEX[p.key]}]`, { color: MUTED, size: 18 }));
+  const idx = INDEX[p.key] || (SCOPUS.has(p.key) ? "Scopus" : "");
+  if (idx) runs.push(t(`  [${idx}]`, { color: MUTED, size: 18 }));
   return new Paragraph({
     tabStops: [{ type: TabStopType.LEFT, position: 520 }],
     indent: { left: 520, hanging: 520 },
@@ -158,7 +160,7 @@ const children = [
 
   heading("Profile at a Glance"),
   bullet([t("About 16 years of teaching experience in computer science and engineering; PhD (2024) from IIIT Allahabad.")]),
-  bullet([t("40+ publications in SCI/Scopus-indexed journals and conferences, including "), t("New Astronomy", { italics: true }), t(", "), t("Experimental Astronomy", { italics: true }), t(", "), t("Signal, Image and Video Processing", { italics: true }), t(" and "), t("Multimedia Tools and Applications", { italics: true }), t(".")]),
+  bullet([t("57 publications, 46 of them indexed in Scopus (260 citations, h-index 9, as of Oct 2026), including "), t("New Astronomy", { italics: true }), t(", "), t("Experimental Astronomy", { italics: true }), t(", "), t("Signal, Image and Video Processing", { italics: true }), t(" and "), t("Multimedia Tools and Applications", { italics: true }), t(".")]),
   bullet([t("Two patents in emergency-response systems; funded projects from VGST and KSCST.")]),
   bullet([t("Guides 4 doctoral scholars at MAHE; has supervised 10+ M.Tech theses and 35+ undergraduate projects.")]),
   bullet([t("Invited speaker at IUCAA Pune, ISRO ISTRAC, IIIT Allahabad and IIIT Lucknow.")]),
