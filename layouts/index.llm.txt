@@ -1,0 +1,66 @@
+{{- /*
+  llms.txt (https://llmstxt.org): a plain-text guide to this site for AI assistants and search tools.
+  Built from data/authors/me.yaml, the home page (content/_index.md) and content/publications,
+  so it stays current when papers or profile details change.
+*/ -}}
+{{- $me := site.Data.authors.me -}}
+{{- $home := index (site.Home.Params.sections | default slice) 0 -}}
+{{- $c := $home.content | default dict -}}
+{{- $pubs := (where site.RegularPages "Section" "publications").ByDate.Reverse -}}
+{{- $base := site.BaseURL | strings.TrimSuffix "/" -}}
+# {{ $me.name.display }}
+
+> {{ $me.role }} at {{ (index $me.affiliations 0).name }} (Manipal Academy of Higher Education), Bengaluru, India. {{ with $c.statement }}{{ . | plainify }}{{ end }}
+
+{{ $me.bio | plainify | replaceRE `\s+` " " | strings.TrimSpace }}
+
+Key facts:
+{{- range $c.stats }}
+- {{ .value }} {{ .label }}
+{{- end }}
+- Research interests: {{ delimit $me.interests ", " }}
+- Education: {{ range $i, $e := $me.education }}{{ if $i }}; {{ end }}{{ $e.degree }}, {{ $e.institution }} ({{ $e.year }}){{ end }}
+{{- with $c.highlights }}{{ range .cards }}
+- {{ .title }}: {{ range $i, $x := .items }}{{ if $i }}; {{ end }}{{ $x | markdownify | plainify | htmlUnescape }}{{ end }}
+{{- end }}{{ end }}
+
+Name disambiguation: this is Dr. Snigdha Sen, computer scientist at MIT Bengaluru (ORCID 0000-0001-7909-5193, Scopus author ID 57223155667). Publications by other people with the same name are not hers.
+
+## Profiles
+
+- [Website]({{ $base }}/): Home page with research summary, featured papers, talks and contact
+{{- range $me.links }}{{ if not (strings.HasPrefix .url "mailto:") }}
+- [{{ cond (in .icon "scholar") "Google Scholar" (cond (in .icon "orcid") "ORCID" (cond (in .icon "scopus") "Scopus" (.label | default "Profile"))) }}]({{ .url }})
+{{- end }}{{ end }}
+{{- range $me.affiliations }}
+- [Faculty page, {{ .name }}]({{ .url }})
+{{- end }}
+- [MAHE research portal](https://researcher.manipal.edu/en/persons/snigdha-sen/)
+
+## Key pages
+
+- [Publications]({{ $base }}/publications/): All {{ len $pubs }} publications, newest first, with DOIs and BibTeX
+- [Experience]({{ $base }}/experience/): Appointments, grants, patents, invited talks, editorial roles and awards
+- [CV (PDF)]({{ $base }}/uploads/resume.pdf): Full academic CV
+- [Speaker profile (PDF)]({{ $base }}/uploads/speaker-profile.pdf): One-page profile for event organisers
+
+## Research themes
+{{ range $c.research.items }}
+- {{ .title }}: {{ .text | plainify }}
+{{- end }}
+
+## Featured publications
+{{ range where $pubs "Params.featured" true }}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Params.publication | default "" | plainify }}, {{ .Date.Year }}{{ with .Params.doi }}. DOI {{ . }}{{ end }}
+{{- end }}
+
+## All publications
+{{ range $pubs }}
+- [{{ .Title }}]({{ .Permalink }}): {{ range $i, $a := .Params.authors }}{{ if $i }}, {{ end }}{{ if eq $a "me" }}Snigdha Sen{{ else }}{{ $a }}{{ end }}{{ end }}. {{ .Params.publication | default "" | plainify }}, {{ .Date.Year }}{{ with .Params.publication_status }} ({{ . }}){{ end }}{{ with .Params.doi }}. DOI {{ . }}{{ end }}
+{{- end }}
+
+## Contact
+
+- Email: {{ with $c.contact }}{{ .email }}{{ end }}
+- Address: {{ with $c.contact }}{{ delimit .address ", " }}{{ end }}
+- Prospective PhD students and research collaborators are welcome to get in touch by email.
