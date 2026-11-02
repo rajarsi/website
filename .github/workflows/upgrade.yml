@@ -11,9 +11,8 @@ on:
         options:
         - Stable
         - Beta (Preview)
-  schedule:
-    # Run at 05:00 on Monday
-    - cron: '0 5 * * 1'
+  # Weekly schedule removed: upgrade manually from the Actions tab when needed,
+  # since site customisations (layouts/ overrides) may need checking after an upgrade.
 
 permissions:
   contents: write
