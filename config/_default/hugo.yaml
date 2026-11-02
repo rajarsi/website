@@ -26,6 +26,11 @@ cascade:
       path: /slides/**
       kind: page
     outputs: [HTML, present]
+  # Tag, author and publication-type listing pages are thin duplicates of the
+  # main pages: keep them out of search results (noindex) and the sitemap.
+  - target:
+      kind: '{taxonomy,term}'
+    private: true
 
 ############################
 ## ADVANCED
