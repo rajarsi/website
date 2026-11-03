@@ -19,4 +19,5 @@ tags:
 - Neural Networks
 - Spark
 featured: false
+description: "Implementation of Neural Network Regression Model for Faster Redshift Analysis on Cloud-Based Spark Platform (2021). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

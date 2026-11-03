@@ -18,4 +18,5 @@ tags:
 - Explainable AI
 - Transformers
 featured: true
+description: "Performance evaluation of efficient interpretable CNN-transformer model for redshift prediction. Signal, Image and Video Processing, 2025. By Dr. Snigdha Sen."
 ---

@@ -13,4 +13,5 @@ doi: 10.1145/3484824.3484877
 tags:
 - Sentiment Analysis
 - COVID-19
+description: "A Machine Learning Approach for Sentiment Analysis to Nurture Mental Health Amidst COVID-19 (2021). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

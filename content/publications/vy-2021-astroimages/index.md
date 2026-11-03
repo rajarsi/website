@@ -13,4 +13,5 @@ doi: 10.1109/conecct52877.2021.9622583
 tags:
 - Astroinformatics
 - Deep Learning
+description: "Analyzing and Processing of Astronomical Images using Deep Learning Techniques (2021). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

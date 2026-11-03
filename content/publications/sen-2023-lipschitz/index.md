@@ -18,4 +18,5 @@ tags:
 - Deep Learning
 - Astronomical Data Analysis
 featured: false
+description: "A Fast and Robust Photometric Redshift Forecasting Method Using Lipschitz Adaptive Learning Rate. Neural Information Processing (ICONIP 2022), 2023."
 ---

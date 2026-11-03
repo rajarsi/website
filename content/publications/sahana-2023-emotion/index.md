@@ -14,4 +14,5 @@ doi: 10.1007/978-981-19-9858-4_1
 tags:
 - Computer Vision
 - CNN
+description: "A CNN-Based Approach for Facial Emotion Detection. Soft Computing: Theories and Applications - Proceedings of SoCTA 2022, 2023. By Dr. Snigdha Sen."
 ---

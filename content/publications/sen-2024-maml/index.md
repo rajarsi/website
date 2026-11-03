@@ -17,4 +17,5 @@ tags:
 - Meta-learning
 - Imbalanced Regression
 featured: false
+description: "Evaluating Efficacy of MAML Based Approach on Regression Using Astronomical Imbalanced Dataset (2024). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

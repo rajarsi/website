@@ -12,4 +12,5 @@ doi: 10.1515/9783110767681-013
 tags:
 - COVID-19
 - Deep Learning
+description: "Evaluation of deep learning models for identification and prediction of new strains of COVID-19 (2023). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

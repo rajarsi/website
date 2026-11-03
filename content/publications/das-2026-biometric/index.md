@@ -14,4 +14,5 @@ doi: 10.1016/j.procs.2026.06.591
 tags:
 - Explainable AI
 - Biometrics
+description: "Explainable Neural Networks for Interpretable Biometric Data Analysis. Procedia Computer Science, 2026. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

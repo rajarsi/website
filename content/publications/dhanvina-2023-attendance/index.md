@@ -13,4 +13,5 @@ doi: 10.1109/inc457730.2023.10263205
 tags:
 - Face Recognition
 - Machine Learning
+description: "Speech-enabled machine learning-based automated attendance monitoring system through face recognition (2023). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

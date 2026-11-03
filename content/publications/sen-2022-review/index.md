@@ -17,4 +17,5 @@ tags:
 - Machine Learning
 - Big Data
 featured: true
+description: "Astronomical big data processing using machine learning: A comprehensive review. Experimental Astronomy, 2022. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

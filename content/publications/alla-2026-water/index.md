@@ -15,4 +15,5 @@ tags:
 - Deep Learning
 - Hyperspectral Imaging
 featured: false
+description: "3D CNNs for Hyperspectral-Based Water Potability Detection. Soft Computing and Its Engineering Applications (icSoftComp 2025), 2026. By Dr. Snigdha Sen."
 ---

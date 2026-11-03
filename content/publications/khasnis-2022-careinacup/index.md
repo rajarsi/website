@@ -13,4 +13,5 @@ doi: 10.1109/icwite57052.2022.10176224
 tags:
 - Assistive Technology
 - Social Good
+description: "Care-In-A-Cup: A Solution to Tend to the Needs of Autistic and Differently Abled Women (2022). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

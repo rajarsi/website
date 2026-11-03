@@ -16,4 +16,5 @@ tags:
 - Machine Learning
 - Materials Informatics
 featured: false
+description: "Machine learning approaches for predicting dielectric properties of banana fibers reinforced with polypropylene composites (2025)"
 ---

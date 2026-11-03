@@ -13,4 +13,5 @@ doi: 10.1007/978-981-99-3878-0_64
 tags:
 - Speech
 - Hidden Markov Model
+description: "Paramount—A Hidden Markov Model Based Intelligent Voice Assistant. Proceedings of International Conference on Data Analytics and Insights, ICDAI 2023, 2023."
 ---

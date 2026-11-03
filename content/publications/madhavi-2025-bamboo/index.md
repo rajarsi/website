@@ -18,4 +18,5 @@ tags:
 - Neural Networks
 - Materials Informatics
 featured: false
+description: "Analysing and predicting dielectric properties of bamboo fiber filled polypropylene composites using artificial neural network (2025)"
 ---

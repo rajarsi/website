@@ -10,4 +10,5 @@ publication_short: 'IJIRCCE'
 publication: '*International Journal of Innovative Research in Computer and Communication
   Engineering (IJIRCCE)*'
 url_pdf: http://www.ijircce.com/upload/2017/june/41_IJIRCCE_Paper_final.pdf
+description: "Implementation of deduplication scheme for Encrypted Data in Cloud (2017). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

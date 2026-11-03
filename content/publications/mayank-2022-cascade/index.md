@@ -13,4 +13,5 @@ doi: 10.1109/conecct55679.2022.9865798
 tags:
 - Apache Spark
 - Big Data
+description: "Implementation of Cascade Learning using Apache Spark (2022). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

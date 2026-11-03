@@ -13,4 +13,5 @@ doi: 10.1109/iccst55948.2022.10040318
 tags:
 - Analytics
 - Social Good
+description: "Analytics to Preserve the Street Vendor Tradition of India and to Optimize profits post Covid-19 (2022). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

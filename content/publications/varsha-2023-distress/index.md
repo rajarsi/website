@@ -14,4 +14,5 @@ doi: 10.1109/ciisca59740.2023.00051
 tags:
 - Computer Vision
 - CNN
+description: "Distress Detection Using a Hybrid SVM - CNN Classifier (2023). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

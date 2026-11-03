@@ -15,4 +15,5 @@ tags:
 - Quantum Cryptography
 - AI
 featured: false
+description: "Revolutionizing Quantum Cryptography With Artificial Intelligence: A Perspective for Collaborative Research (2024). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

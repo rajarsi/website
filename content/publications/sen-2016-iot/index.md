@@ -8,4 +8,5 @@ publication_types:
 - paper-conference
 publication_short: 'IJERT'
 publication: '*International Journal of Engineering Research & Technology (IJERT)*'
+description: "Internet of Things: an Introduction to Connecting the Unconnected. , 2016. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

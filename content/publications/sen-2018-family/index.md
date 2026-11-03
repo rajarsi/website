@@ -8,4 +8,5 @@ publication_types:
 - article-journal
 publication_short: 'IJARCS'
 publication: '*International Journal of Advanced Research in Computer Science*'
+description: "Development of an Exclusive Web Application for Family. , 2018. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

@@ -21,7 +21,7 @@ hugoblox:
     # Short tagline displayed on your site
     tagline: "Astroinformatics · Deep Learning · Computer Vision"
     # Site meta description for search engines and social sharing
-    description: "Dr. Snigdha Sen is a Senior Assistant Professor in the School of Computer Engineering at MIT Bengaluru (MAHE), working on astroinformatics, deep learning, computer vision and explainable AI for space science."
+    description: "Dr. Snigdha Sen, Senior Assistant Professor at MIT Bengaluru (MAHE), working on astroinformatics, deep learning and explainable AI for space science."
     # Social accounts (used for meta tags like Twitter Cards)
     social:
       twitter: "" # Twitter/X handle for Twitter Cards (without @)

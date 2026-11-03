@@ -23,4 +23,5 @@ tags:
 - Vision-Language
 - Video Captioning
 featured: false
+description: "A SwinBERT framework with temporal windowed cross attention for video captioning for visual language intelligence. Discover Applied Sciences, 2026."
 ---

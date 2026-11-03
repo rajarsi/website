@@ -15,4 +15,5 @@ tags:
 - Photometric Redshift
 - Deep Learning
 featured: false
+description: "An Energy-Efficient Deep Neural Network Model for Photometric Redshift Estimation. Innovations in Computer Science and Engineering, 2023. By Dr. Snigdha Sen."
 ---

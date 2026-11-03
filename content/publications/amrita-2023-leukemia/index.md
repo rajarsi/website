@@ -15,4 +15,5 @@ tags:
 - Deep Learning
 - Medical Imaging
 featured: false
+description: "Deep Learning Algorithms for Classification and Prediction of Acute Lymphoblastic Leukemia. Current Applications of Deep Learning in Cancer Diagnostics, 2023."
 ---

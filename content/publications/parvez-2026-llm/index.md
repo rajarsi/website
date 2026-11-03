@@ -18,4 +18,5 @@ tags:
 - Large Language Models
 - Astronomical Data Analysis
 featured: false
+description: "Efficient LLM Framework Using LORA Based Fine Tuning to Analyze Textual Astronomical Data (2026). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

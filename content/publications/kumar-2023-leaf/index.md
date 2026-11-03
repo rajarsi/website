@@ -14,4 +14,5 @@ doi: 10.1007/978-981-19-9858-4_74
 tags:
 - Computer Vision
 - Agriculture
+description: "Plant Leaf Disease Detection Using ResNet. Soft Computing: Theories and Applications - Proceedings of SoCTA 2022, 2023. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

@@ -19,4 +19,5 @@ tags:
 - Computer Vision
 - Clustering
 featured: false
+description: "Investigation of Clustering Methods for SDSS Galaxy Images through Feature Extraction with VGG-16 (2024). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

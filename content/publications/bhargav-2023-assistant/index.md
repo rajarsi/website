@@ -15,4 +15,5 @@ doi: 10.1007/978-981-19-7455-7_36
 tags:
 - Speech
 - Virtual Assistant
+description: "Voice-Based Intelligent Virtual Assistant for Windows. Innovations in Computer Science and Engineering - Proceedings of the 10th ICICSE, 2022, 2023."
 ---

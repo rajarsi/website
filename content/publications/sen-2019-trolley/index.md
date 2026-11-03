@@ -9,4 +9,5 @@ publication_types:
 publication_short: 'IJRITCC'
 publication: '*International Journal on Recent and Innovation Trends in Computing
   and Communication (IJRITCC)*'
+description: "Development of an IoT Based Shopping Trolley. , 2019. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

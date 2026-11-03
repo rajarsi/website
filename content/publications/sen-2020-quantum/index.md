@@ -8,4 +8,5 @@ publication_types:
 - article-journal
 publication_short: 'CSI Comm.'
 publication: '*CSI Communications*'
+description: "Quantum Computing: A new phase of Computing. , 2020. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

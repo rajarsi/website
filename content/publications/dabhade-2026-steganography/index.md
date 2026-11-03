@@ -24,4 +24,5 @@ tags:
 - Deep Learning
 - Image Steganography
 featured: false
+description: "A novel block based preparation network using convolutional neural networks for image steganography and robust data protection (2026)"
 ---

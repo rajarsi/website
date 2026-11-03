@@ -17,4 +17,5 @@ tags:
 - Imbalanced Regression
 - Neural Networks
 featured: true
+description: "Dealing with imbalanced regression problem for large dataset using scalable Artificial Neural Network. New Astronomy, 2023. By Dr. Snigdha Sen."
 ---

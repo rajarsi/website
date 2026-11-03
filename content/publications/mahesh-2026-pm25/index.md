@@ -14,4 +14,5 @@ publication_status: 'Accepted / in press'
 tags:
 - Air Quality
 - Machine Learning
+description: "Prediction of PM2.5 Using Machine Learning Algorithms: A Case Study for Bengaluru, India. Aerosol Science and Engineering, 2026. By Dr. Snigdha Sen."
 ---

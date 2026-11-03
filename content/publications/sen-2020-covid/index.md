@@ -9,4 +9,5 @@ publication_types:
 - article-journal
 publication_short: 'LNCS'
 publication: '*LNCS, Springer*'
+description: "Analysis, Visualization and prediction of Covid19 pandemic spread using Machine Learning. , 2020. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

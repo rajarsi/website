@@ -16,4 +16,5 @@ tags:
 - Neural Networks
 - Materials Informatics
 featured: false
+description: "A novel Artificial Neural Network-based model for predicting dielectric properties of banana fiber filled with polypropylene composites (2023)"
 ---

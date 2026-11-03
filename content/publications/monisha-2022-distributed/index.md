@@ -15,4 +15,5 @@ doi: 10.1007/978-981-19-0901-6_26
 tags:
 - Astroinformatics
 - Big Data
+description: "An Approach Toward Design and Implementation of Distributed Framework for Astronomical Big Data Processing (2022). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

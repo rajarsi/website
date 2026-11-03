@@ -9,4 +9,5 @@ view: citation
 banner:
   caption: ''
   image: ''
+description: "Publications by Dr. Snigdha Sen, MIT Bengaluru: journal articles, conference papers and book chapters on astroinformatics, deep learning and AI."
 ---

@@ -17,4 +17,5 @@ tags:
 - Computer Vision
 - Object Detection
 featured: false
+description: "Real-Time Object Detection and Tracking Using Mobinet and SSD Algorithms (2025). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

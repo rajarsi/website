@@ -8,4 +8,5 @@ publication_types:
 - article-journal
 publication_short: 'CSI Comm.'
 publication: '*CSI Communications*'
+description: "An Overview of Semantic Web. , 2020. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

@@ -18,4 +18,5 @@ tags:
 - Anomaly Detection
 - Satellite Telemetry
 featured: false
+description: "Explainable Deep Learning for Satellite Telemetry Anomaly Detection: A Systematic Literature Review. IEEE Access, 2026. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

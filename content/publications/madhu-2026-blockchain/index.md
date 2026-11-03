@@ -15,4 +15,5 @@ tags:
 - Healthcare AI
 - Blockchain
 featured: false
+description: "An AI-Based Secure and Robust Customized Patient Healthcare System Using Blockchain Technology. AI in Smart and Secure Healthcare, 2026. By Dr. Snigdha Sen."
 ---

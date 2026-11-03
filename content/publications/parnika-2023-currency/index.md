@@ -15,4 +15,5 @@ doi: 10.1109/ic3s57698.2023.10169455
 tags:
 - Explainable AI
 - Machine Learning
+description: "An Explainable Machine Learning Model to Analyze and Detect Fake Currency (2023). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

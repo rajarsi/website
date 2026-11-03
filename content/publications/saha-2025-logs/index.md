@@ -17,4 +17,5 @@ tags:
 - Small Language Models
 - Log Analysis
 featured: false
+description: "Extensive Log Analysis Using Small Language Models in Minimal Resource Environments (2025). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

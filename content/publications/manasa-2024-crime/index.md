@@ -16,4 +16,5 @@ tags:
 - Explainable AI
 - Imbalanced Data
 featured: false
+description: "Interpretable Predictions for crime categories using log loss approach for imbalanced target feature (2024). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

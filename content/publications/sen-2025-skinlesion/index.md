@@ -16,4 +16,5 @@ tags:
 - Medical Imaging
 - Image Segmentation
 featured: false
+description: "Precise Image Segmentation using Explainable U-Net based Hybrid Approach for Improved Detection of Skin Lesion (2025). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

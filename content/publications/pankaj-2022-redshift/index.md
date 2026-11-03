@@ -13,4 +13,5 @@ doi: 10.1109/icdsaai55433.2022.10028971
 tags:
 - Photometric Redshift
 - Apache Spark
+description: "A Novel Classification-Based Approach for Quicker Prediction of Redshift Using Apache Spark (2022). By Dr. Snigdha Sen, MIT Bengaluru."
 ---

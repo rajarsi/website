@@ -15,4 +15,5 @@ tags:
 - Deep Learning
 - Image Steganography
 featured: false
+description: "A novel blocked based U-Net model for image steganography. Multimedia Tools and Applications, 2025. Paper by Dr. Snigdha Sen, MIT Bengaluru."
 ---

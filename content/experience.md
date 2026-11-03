@@ -61,4 +61,5 @@ sections:
     content:
       title: Awards
       username: me
+description: "Dr. Snigdha Sen's academic appointments, research grants, patents, invited talks, editorial board roles and awards."
 ---

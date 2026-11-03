@@ -13,4 +13,5 @@ doi: 10.1007/978-981-99-3932-9_25
 tags:
 - Time Series
 - Deep Learning
+description: "Forecasting and Analysing Time Series Data Using Deep Learning (2023). By Dr. Snigdha Sen, MIT Bengaluru."
 ---
