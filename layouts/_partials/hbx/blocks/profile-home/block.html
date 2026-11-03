@@ -171,8 +171,19 @@
       <h2>{{ .title }}</h2>
       <p>{{ .text }}</p>
       {{ with .email }}<a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+      {{ with .hours }}<p class="sh-hours">{{ . }}</p>{{ end }}
     </div>
-    <div>{{ range .address }}<p>{{ . }}</p>{{ end }}</div>
+    <div>
+      {{ range .address }}<p>{{ . }}</p>{{ end }}
+      {{ with .directions }}<p style="margin-top:10px"><a class="sh-dir" href="{{ . }}" target="_blank" rel="noopener">Directions to campus →</a></p>{{ end }}
+    </div>
+    {{ with .students }}
+    <div id="prospective-students" class="sh-students">
+      <h3>{{ .title }}</h3>
+      {{ with .text }}<p>{{ . | markdownify }}</p>{{ end }}
+      {{ with .items }}<ol>{{ range . }}<li>{{ . | markdownify }}</li>{{ end }}</ol>{{ end }}
+    </div>
+    {{ end }}
   </div>
 </div>
 {{ end }}

@@ -84,6 +84,17 @@ sections:
         title: Get in touch
         text: Prospective students and collaborators are welcome.
         email: snigdha.sen@manipal.edu
+        hours: Meetings by appointment. Please email first.
+        directions: https://www.google.com/maps/search/?api=1&query=Manipal+Institute+of+Technology+Bengaluru
+        # DRAFT for Snigdha to review
+        students:
+          title: Prospective PhD and M.Tech students
+          text: 'I welcome motivated students who want to work on deep learning for astronomical data, explainable AI or computer vision. To help me reply quickly:'
+          items:
+            - 'Email me with the subject line **"Prospective PhD student: your name"** (or M.Tech).'
+            - Attach your CV and say, in one paragraph, which of my research themes interests you and why.
+            - Mention your programming and machine-learning experience, with links to code or projects if you have them.
+            - PhD admission at MAHE follows the university's admission cycle, so please also check MAHE's PhD admission notices for eligibility and dates.
         address:
           - School of Computer Engineering
           - Manipal Institute of Technology Bengaluru, MAHE

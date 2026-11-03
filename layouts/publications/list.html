@@ -22,11 +22,17 @@
     <h1>Publications</h1>
     <p class="pb-intro">{{ len $pubs }} publications, newest first: {{ index $count "j" }} journal articles, {{ index $count "c" }} conference papers and {{ index $count "b" }} book chapters.
       {{ range $profile.links }}{{ if in (.icon | default "") "google-scholar" }}Citations are tracked on <a href="{{ .url }}" target="_blank" rel="noopener">Google Scholar</a>.{{ end }}{{ end }}</p>
-    <p class="pb-legend"><span class="pb-badge j">Journal</span><span class="pb-badge c">Conference</span><span class="pb-badge b">Book chapter</span></p>
+    <div class="pb-filter" role="group" aria-label="Show publications by type">
+      <button type="button" class="on" data-filter="all" aria-pressed="true">All <span>{{ len $pubs }}</span></button>
+      <button type="button" data-filter="j" aria-pressed="false"><i class="pb-dot j"></i>Journal <span>{{ index $count "j" }}</span></button>
+      <button type="button" data-filter="c" aria-pressed="false"><i class="pb-dot c"></i>Conference <span>{{ index $count "c" }}</span></button>
+      <button type="button" data-filter="b" aria-pressed="false"><i class="pb-dot b"></i>Book chapter <span>{{ index $count "b" }}</span></button>
+    </div>
   </header>
 
   {{ $n := 0 }}
   {{ range $pubs.GroupByDate "2006" }}
+  <section class="pb-group">
   <h2 class="pb-year">{{ .Key }}</h2>
   <ol class="pb-list">
     {{ range .Pages }}
@@ -38,7 +44,7 @@
     {{ $month := "" }}
     {{ with $bib }}{{ with findRESubmatch `month\s*=\s*\{?([A-Za-z]+)` .Content 1 }}{{ $month = substr (index (index . 0) 1) 0 3 }}{{ end }}{{ end }}
     {{ $venue := .Params.publication | default "" }}
-    <li class="pb-item" id="{{ $id }}">
+    <li class="pb-item" id="{{ $id }}" data-type="{{ $t.k }}">
       <div class="pb-side">
         <span class="pb-badge {{ $t.k }}" title="{{ $t.label }}{{ with $venue }} · {{ . | markdownify | plainify }}{{ end }}">{{ .Params.publication_short | default $t.label }}</span>
         <span class="pb-num">[{{ $n }}]</span>
@@ -72,10 +78,25 @@
     </li>
     {{ end }}
   </ol>
+  </section>
   {{ end }}
 </div>
 
 <script>
+(function () {
+  var btns = document.querySelectorAll('.pb-filter [data-filter]');
+  function apply(f) {
+    btns.forEach(function (b) { var on = b.dataset.filter === f; b.classList.toggle('on', on); b.setAttribute('aria-pressed', on); });
+    document.querySelectorAll('.pb-item').forEach(function (li) { li.hidden = f !== 'all' && li.dataset.type !== f; });
+    document.querySelectorAll('.pb-group').forEach(function (g) { g.hidden = !g.querySelector('.pb-item:not([hidden])'); });
+  }
+  btns.forEach(function (b) { b.addEventListener('click', function () {
+    apply(b.dataset.filter);
+    try { history.replaceState(null, '', b.dataset.filter === 'all' ? location.pathname : '?type=' + b.dataset.filter); } catch (err) {}
+  }); });
+  var q = new URLSearchParams(location.search).get('type');
+  if (q && document.querySelector('.pb-filter [data-filter="' + q + '"]')) apply(q);
+})();
 document.addEventListener('click', function (e) {
   var b = e.target.closest('[data-panel]');
   if (b) {

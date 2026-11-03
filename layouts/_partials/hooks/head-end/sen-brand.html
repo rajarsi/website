@@ -93,6 +93,14 @@ h1,h2,h3,.font-serif{font-family:'EB Garamond',Georgia,serif}
 .sh-contact h2{margin:0;font-size:30px;font-weight:600;color:#FBF7F0}
 .sh-contact p{font-size:16px;color:var(--sen-mist);line-height:1.6}
 .sh-contact a{font-size:17px;font-weight:600;color:var(--sen-saffron)}
+.sh-hours{font-size:15px!important}
+.sh-contact a.sh-dir{font-size:15px}
+.sh-students{flex:1 1 100%;margin-top:8px;padding:24px 28px;border:1px solid #3B4D6B;border-radius:14px;background:rgba(255,255,255,.04)}
+.sh-students h3{margin:0 0 8px;font-family:'Public Sans',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--sen-saffron)}
+.sh-students p,.sh-students li{font-size:16px;line-height:1.6;color:#DCE4EE}
+.sh-students ol{margin:10px 0 0;padding-left:22px;list-style:decimal;display:flex;flex-direction:column;gap:6px}
+.sh-students a{font-size:inherit!important}
+@media (max-width:640px){.sh-students{padding:20px 18px}}
 
 /* ---------- Publications page (al-folio style) ---------- */
 .pb{max-width:980px;margin:0 auto;padding:56px 24px 88px;color:var(--sen-ink)}
@@ -107,6 +115,16 @@ h1,h2,h3,.font-serif{font-family:'EB Garamond',Georgia,serif}
 .pb-side{display:flex;flex-direction:column;align-items:center;gap:8px;padding-top:2px}
 .pb-badge{display:inline-block;width:100%;max-width:136px;padding:6px 8px;border-radius:6px;font-size:12px;font-weight:700;letter-spacing:.3px;line-height:1.25;text-align:center;color:#fff;background:var(--sen-navy)}
 .pb-legend .pb-badge{width:auto;padding:4px 10px}
+.pb-filter{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0}
+.pb-filter button{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 14px;border:1px solid #C9D3E1;border-radius:999px;background:#fff;font:inherit;font-size:14px;font-weight:600;color:#1E3A5F;cursor:pointer;transition:border-color .15s,background .15s,color .15s}
+.pb-filter button span{font-weight:500;color:#7A8494;font-variant-numeric:tabular-nums}
+.pb-filter button:hover{border-color:var(--sen-navy)}
+.pb-filter button.on{background:var(--sen-navy);border-color:var(--sen-navy);color:#fff}
+.pb-filter button.on span{color:#B9C7DA}
+.pb-dot{width:10px;height:10px;border-radius:3px;background:var(--sen-navy)}
+.pb-dot.c{background:var(--sen-clay)}.pb-dot.b{background:#E9A848}
+.pb-filter button.on .pb-dot.j{background:#fff}
+.pb-group[hidden],.pb-item[hidden]{display:none}
 .pb-badge.c{background:var(--sen-clay)}
 .pb-badge.b{background:#E9A848;color:var(--sen-navy)}
 .pb-num{font-size:12px;font-weight:600;color:#9AA3B0;font-variant-numeric:tabular-nums}

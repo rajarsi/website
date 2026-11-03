@@ -197,6 +197,8 @@ hugoblox:
   # Traffic and behavior analytics
   # ────────────────────────────────────────────────────────────────────────────
   analytics:
+    # GoatCounter (free, cookie-free): put the site code here, e.g. "snigdhasen" for snigdhasen.goatcounter.com
+    goatcounter: ""
     google:
       measurement_id: "" # Google Analytics 4: G-XXXXXXXXXX
     google_tag_manager:
